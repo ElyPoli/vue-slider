@@ -42,6 +42,9 @@ const app = Vue.createApp({
             if (this.indexActiveImage > this.slides.length - 1) {
                 this.indexActiveImage = 0;
             }        
+        },
+        onThumbClick(indexActiveImage) {
+            this.indexActiveImage = indexActiveImage;
         }
     }
 })

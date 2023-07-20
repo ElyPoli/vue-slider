@@ -29,20 +29,17 @@
                     </div>
                 </div>
 
-
-
-
                 <div class="thumbs">
                     <div class="prev" @click="onPrevClick()"></div>
                     <div class="next" @click="onNextClick()"></div>
-                    <div class="thumb" v-for="(singleElement, i) in slides"
+                    <div class="thumb" v-for="(singleElement, i) in slides" @click="onThumbClick(i)"
                         v-bind:class="(indexActiveImage === i ? 'active' : '')">
-                    <img v-bind:src="singleElement.image" v-bind:alt="singleElement.title">
+                        <img v-bind:src="singleElement.image" v-bind:alt="singleElement.title">
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
     </div>
 
