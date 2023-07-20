@@ -14,7 +14,7 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseover="hoverSlider()" @mouseout="leaveSlider()">
 
                 <div class="item" v-for="(singleElement, i) in slides"
                     v-bind:class="(indexActiveImage === i ? 'active' : '')">
